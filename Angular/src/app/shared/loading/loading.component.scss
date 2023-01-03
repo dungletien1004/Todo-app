@@ -1,0 +1,44 @@
+.overlay {
+  &.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .rotary {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1px;
+      border: 3px solid;
+      border-color: #388eff #1c7dfd #388eff transparent;
+      border-radius: 50%;
+      animation: rotate 5s cubic-bezier( 0.1, 0.2, 0.9, 0.8 ) infinite;
+    }
+  }
+  &.inactive {
+    display: none;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(1turn);
+  }
+}
+
+.rotaries {
+  filter: url("#goo");
+}
+.hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}

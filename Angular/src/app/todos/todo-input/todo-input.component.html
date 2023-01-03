@@ -1,0 +1,20 @@
+<div class="todo-input__wrapper" [formGroup] = "taskNowForm">
+  <div class="input-box">
+    <input
+      type="text"
+      #input
+      class="todo-textfield"
+      placeholder="Enter a task"
+      formControlName="content"
+      (keydown)="handleKeyDown($event)"
+    >
+    <input type="datetime-local"
+      id="birthdaytime"
+      name="birthdaytime"
+      class="input-date"
+      [min]="currentDate"
+      formControlName="timeDeadline"
+    >
+  </div>
+  <button class="add-btn" [disabled]="!(taskNowForm.value.content && taskNowForm.value.timeDeadline)" (click)="handleSubmit()">{{ isEdit ? 'Edit' : 'Add'}}</button>
+</div>

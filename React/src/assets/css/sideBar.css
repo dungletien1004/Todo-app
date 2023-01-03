@@ -1,0 +1,44 @@
+.sideBar {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #d4f2ef;
+  z-index: -1;
+  text-align: center;
+}
+.sideBar__user {
+  padding-top: 60px;
+  text-align: center;
+}
+.sideBar__user__avt {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  border: solid 1px black;
+ 
+}
+.sideBar__user__name {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.sideBar__user__card {
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 5%;
+}
+.card {
+  width: 30%;
+}
+
+.sideBar__today {
+  margin-top: 10px;
+  font-size: 25px;
+}
+@media only screen and (max-width: 1050px) {
+  .sideBar {
+    width: 25%;
+  }
+}

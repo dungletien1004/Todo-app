@@ -1,0 +1,30 @@
+.todos {
+  width: 60vw;
+  margin-top: 40px;
+  background-color: var(--default-bg);
+  border-radius: 10px 10px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+@media only screen and (max-width: 992px) {
+  .todos {
+    width: 80vw;
+  }
+}
+.title-icon {
+  font-size: 20px;
+}
+.todos-title {
+  text-align: center;
+  font-size: 40px;
+  color: #6C4AB6;
+}
+.todos-list {
+  max-height: 350px;
+  overflow-y: scroll;
+  padding: 5px 60px;
+}
+.todo-length {
+  padding: 10px 40px;
+  font-size: 20px;
+}

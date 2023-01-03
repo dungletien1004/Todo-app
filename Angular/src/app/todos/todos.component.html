@@ -1,0 +1,18 @@
+<div class="todos">
+
+  <h1 class="todos-title" (click)="handleClick()">
+    <fa-icon  [icon]="faListCheck" class="title-icon"></fa-icon>
+    <i>Todos</i>
+  </h1>
+  <app-todo-input ></app-todo-input>
+  <app-todo-filter></app-todo-filter>
+  <div class="todos-list" >
+    <ng-container *ngIf="loading; else todoItem"
+      ><app-loading></app-loading
+    ></ng-container>
+   <ng-template #todoItem>
+    <app-todo-item *ngFor="let todo of todosRender" [todo]="todo"></app-todo-item>
+  </ng-template>
+  </div>
+  <div class="todo-length">{{ length }}</div>
+</div>

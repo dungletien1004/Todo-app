@@ -1,0 +1,11 @@
+<div class="filter__wrapper">
+  <div class="btn-group">
+    <button class="filter-btn"
+      *ngFor="let btn of filterBtn"
+      [ngClass]="{ active: btn.isActive }"
+      (click)="handleClickFilter(btn.type)"
+    >
+      {{ btn.label }}
+    </button>
+  </div>
+</div>

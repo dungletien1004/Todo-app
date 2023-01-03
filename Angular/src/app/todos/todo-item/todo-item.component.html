@@ -1,0 +1,19 @@
+<div class="item__wrapper"
+  (mouseover)="isHover = true"
+  (mouseout)="isHover = false"
+>
+<div class="todo-check" (click)="handleClick()">
+  <input type="checkbox" class="todo-checkbox" [checked]="todo.isCompleted" >
+  <label>{{todo.content}}</label>
+  <span class="todo-time" [ngClass]="{active: todo.isCompleted}"> Expires on: <span class="time">{{ deadline }}</span> </span>
+</div>
+<div class="mes-alert"><i>{{ mesAlert }}</i></div>
+<div class="item-btn" [ngClass]="{'active': isHover}">
+  <span class="item-icon edit" [ngClass]="{'active': isHover, 'not-show': todo.isCompleted }">
+    <fa-icon [icon]="faPenToSquare" (click)="handelClickEdit()"></fa-icon>
+  </span>
+  <span class="item-icon trash" [ngClass]="{'active': isHover}" (click)="handleDeleteTask()">
+    <fa-icon [icon]="faTrash"></fa-icon>
+  </span>
+</div>
+</div>

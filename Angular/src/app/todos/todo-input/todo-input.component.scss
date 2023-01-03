@@ -1,0 +1,49 @@
+.todo-input__wrapper {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+
+  .todo-textfield {
+    width: 95%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  .add-btn {
+    width: 60px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: -10px;
+    border: none;
+    color: white;
+    background-color: #5DA7DB;
+    border-radius: 5px;
+  }
+  input {
+    &:focus {
+      outline: none !important;
+      border: 2px solid #5DA7DB;
+      box-shadow: 0 0 10px #719ECE;
+    }
+  }
+  button {
+    &:disabled {
+      background-color: #D2DAFF;
+    }
+  }
+  & .input-box {
+    width: 75%;
+    position: relative;
+  }
+  & .input-date {
+    position: absolute;
+    margin-left: -30px;
+    top: 12px;
+    border: none;
+    height: 20px;
+    width: 25px;
+    font-size: 22px;
+  }
+}
